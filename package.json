@@ -1,0 +1,12 @@
+{
+  "name": "brasa-club-cardapio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cardápio digital local da hamburgueria Brasa Club com pedidos pelo WhatsApp.",
+  "scripts": {
+    "dev": "node tools/dev-server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

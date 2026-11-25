@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#121110">
+  <meta name="description" content="Escolha seu hambúrguer, pizza ou combo no cardápio do Brasa Club e faça seu pedido pelo WhatsApp.">
+  <title>Brasa Club · Cardápio</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/brand/brasa-ambar.svg">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/order.css">
+  <script defer src="./scripts/ui.js"></script>
+  <script defer src="./scripts/catalog.js"></script>
+  <script defer src="./scripts/order.js"></script>
+  <script defer src="./scripts/menu.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Ir para o conteúdo</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#cardapio" aria-label="Brasa Club, início">
+        <img src="./assets/brand/brasa-ambar.svg" alt="" width="43" height="47">
+        <span class="wordmark">BRASA<span>CLUB</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a href="#cardapio" data-nav="menu"><i data-icon="utensils"></i>Cardápio</a>
+        <a href="#combos-e-ofertas" data-nav="deals"><i data-icon="ticket"></i>Combos e ofertas</a>
+      </nav>
+      <div class="header-actions">
+        <span class="delivery-status"><i></i>Delivery</span>
+        <button class="header-cart" type="button" data-open-cart><i data-icon="bag"></i><span>Meu carrinho</span><b data-cart-count>0</b></button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <section class="hero" aria-label="Combos em destaque" aria-roledescription="carrossel">
+      <picture class="hero-art">
+        <source id="hero-mobile-image" media="(max-width: 700px)" srcset="./assets/previews/combo-brasa.webp">
+        <img id="hero-image" src="./assets/campaign/combo-brasa.webp" alt="" fetchpriority="high">
+      </picture>
+      <div class="hero-content">
+        <span class="hero-kicker"><i data-icon="flame" data-size="14"></i> DESTAQUE DA CASA</span>
+        <h2 id="hero-title">COMBO <em>DA BRASA</em></h2>
+        <p id="hero-description"></p>
+        <div class="hero-action-row">
+          <button type="button" class="primary hero-button" id="hero-details">Ver combo<i data-icon="arrow-right" data-size="17"></i></button>
+          <div class="hero-price"><s id="hero-old"></s><strong id="hero-price"></strong></div>
+        </div>
+      </div>
+      <div class="discount-stamp" id="discount-stamp" aria-label="20 por cento de desconto"><div><strong>20<span>%</span></strong><b>OFF</b></div></div>
+      <div class="hero-controls">
+        <button type="button" id="hero-autoplay" aria-label="Pausar rotação dos destaques"></button>
+        <div class="hero-pager" aria-label="Selecionar destaque"></div>
+      </div>
+      <div class="hero-arrows">
+        <button type="button" id="prev-hero" aria-label="Combo anterior"><i data-icon="chevron-left" data-size="17"></i></button>
+        <button type="button" id="next-hero" aria-label="Próximo combo"><i data-icon="chevron-right" data-size="17"></i></button>
+      </div>
+    </section>
+    <div id="menu-intro">
+      <div class="menu-heading">
+        <h1 id="menu-title"><span class="desktop-title">Nosso cardápio</span><span class="mobile-title">O que vai pedir <em>hoje?</em></span></h1>
+        <div class="catalog-tools">
+          <label class="search-box"><i data-icon="search" data-size="18"></i><input id="search" type="search" placeholder="Buscar no cardápio" aria-label="Buscar no cardápio" maxlength="100" autocomplete="off"></label>
+          <button type="button" id="favorites-filter" class="filter-button" aria-label="Mostrar favoritos" aria-pressed="false" title="Mostrar favoritos"><i data-icon="heart" data-size="19"></i></button>
+        </div>
+      </div>
+      <div id="category-tabs" class="category-tabs" role="group" aria-label="Categorias do cardápio"></div>
+    </div>
+    <section id="menu-section" aria-label="Produtos do cardápio">
+      <span id="result-status" class="sr-only" role="status"></span>
+      <div id="menu-results"></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap">
+    <span><img src="./assets/brand/brasa-ambar.svg" alt="" width="19" height="21"><b>Brasa Club</b></span>
+    <span><i data-icon="clock" data-size="15"></i><span>Entrega estimada em <span data-delivery-estimate>35–50 min</span></span></span>
+  </footer>
+  <nav class="mobile-nav" aria-label="Navegação do celular">
+    <a href="#cardapio" data-nav="menu"><i data-icon="utensils"></i>Cardápio</a>
+    <a href="#combos-e-ofertas" data-nav="deals"><i data-icon="ticket"></i>Combos e ofertas</a>
+    <button type="button" data-open-cart><span class="mobile-cart-icon"><i data-icon="bag"></i><b data-cart-count>0</b></span>Carrinho</button>
+  </nav>
+  <dialog id="product-dialog" aria-labelledby="product-title"></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
