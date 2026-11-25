@@ -2,6 +2,8 @@
 
 Cardápio digital de uma hamburgueria fictícia. O cliente escolhe os produtos, revisa o carrinho, informa o endereço e a forma de pagamento e abre o pedido no WhatsApp para enviá-lo à loja.
 
+Link público para compartilhar pelo WhatsApp: [pubbrasaclub.vercel.app](https://pubbrasaclub.vercel.app/). A prévia do link usa os metadados Open Graph no `index.html` e a imagem em `assets/brand/og-image.jpg`.
+
 O destaque da página inicial apresenta os cinco combos em rotação automática com transição lateral a cada cinco segundos, aproximadamente. O botão ao lado dos indicadores permite pausar e retomar. A rotação pausa quando a página está fora de vista, ao abrir um painel e para quem usa a preferência de movimento reduzido.
 
 ## Abrir no computador
